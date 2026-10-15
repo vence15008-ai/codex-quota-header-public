@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — documentation and discoverability
+
+- Clarify the Chinese/English project title, supported scenario, quota-versus-billing distinction, and installation entry point.
+- Add bilingual FAQ, source-backed project facts, machine-readable metadata and an optional documentation index.
+- Add repository/package discovery metadata without keyword stuffing, tracking, or unsupported ranking claims.
+- Refresh source manifest through an explicit build option; preserve quota UI, runtime and license behavior.
+
 ## 0.1.1 — release candidate (2026-10-15)
 
 - Replace the license for this candidate with the custom Codex Quota Header Notification License 1.0 (not MIT; no OSI approval claimed).

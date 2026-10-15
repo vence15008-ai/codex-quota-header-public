@@ -1,14 +1,32 @@
-# Codex Quota Header
+# Codex Quota Header — Windows Codex 额度监控
 
-把 Codex 剩余额度放进 Windows 桌面端的窗口顶栏，无需反复打开额度面板。
+**Codex Quota Header 是 Windows Codex 桌面端的非官方额度监控工具（quota monitor）。** 它把账号剩余周额度、可选 5 小时额度、进度条和重置时间显示在窗口 Header／标题栏，每分钟刷新，让你不用反复打开额度面板。
 
-[English](README.en.md) · [安全说明](SECURITY.md) · [贡献指南](CONTRIBUTING.md) · [更新记录](CHANGELOG.md)
+Unofficial Windows Codex desktop quota monitor: remaining weekly / 5-hour usage limits and reset times in the window header. Not a token counter or billing dashboard.
+
+[English](README.en.md) · [常见问题 / FAQ](docs/FAQ.md) · [项目事实与引用](docs/PROJECT-FACTS.md) · [安全说明](SECURITY.md) · [贡献指南](CONTRIBUTING.md) · [更新记录](CHANGELOG.md)
+
+[![Tests](https://github.com/vence15008-ai/codex-quota-header-public/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/vence15008-ai/codex-quota-header-public/actions/workflows/test.yml)
 
 源码公开，采用[自定义通知许可证](LICENSE)，不是标准 MIT；商用或修改后对外发布须通知一次，无需付费或等待批准。
 
 ![Header 示意，全部为虚构数据](docs/header-demo.svg)
 
 > 非官方实验项目，与 OpenAI 无关联。通过本机 CDP 挂载，不是官方 Header 插件接口；Codex 更新可能导致失效。仅支持 Windows，请先阅读调试端口风险。
+
+## 项目速览
+
+| 问题 | 直接答案 |
+| --- | --- |
+| 能做什么？ | 在 Codex 窗口顶栏常驻显示账号剩余额度和重置时间。 |
+| 面向谁？ | 使用 Windows Codex 桌面端、希望随时看到 usage limits 的用户。 |
+| 数据从哪里来？ | 已登录 Codex 的 `account/rateLimits/read`，按额度窗口时长识别周额度和 5H。 |
+| 是否显示花费或本机 token 消耗？ | 不显示；账号限额不是美元余额或本设备用量。 |
+| 支持平台？ | Windows 10/11；macOS/Linux 桌面暂不支持。 |
+| 核心依赖？ | Node.js 22+、Python 3.10+、Codex 桌面端及原生 `codex.exe`，无第三方 npm/pip 依赖。 |
+| 如何授权？ | 自定义通知许可；商用或修改后对外分发需提前提交一次 GitHub Issue，无需付费或批准。 |
+
+适合想找“Codex 额度显示、Codex 周额度重置时间、Codex 标题栏额度插件”的用户。实现是本地辅助进程与 Header 挂载，不是官方插件市场扩展，也不会提高或绕过账号限额。
 
 ## 功能
 
@@ -33,6 +51,11 @@
 ## 安装与启动
 
 下载源码包并解压，或克隆仓库。目录应由本人独占写入，**不要放在其他用户或不可信程序可写的共享目录**。
+
+```powershell
+git clone https://github.com/vence15008-ai/codex-quota-header-public.git
+cd codex-quota-header-public
+```
 
 在项目目录打开 PowerShell：
 
@@ -83,7 +106,7 @@ Python 优先 PATH（跳过 WindowsApps 商店别名），其次 Codex 缓存 ru
 .\manage.ps1 -Action Rollback
 ```
 
-先停止本项目 helper，再移除组件、恢复备份启动项并运行本项目旧浮窗，不停止其他目录的浮窗。原始 `codex_quota_widget.py` 保持不变；基线标签 `floating-baseline-20261013`。旧浮窗不享有新组件全部改进。
+先停止本项目 helper，再移除组件、恢复备份启动项并运行随源码附带的旧浮窗，不停止其他目录的浮窗。旧浮窗 `codex_quota_widget.py` 不享有新组件全部改进；历史基线标签只保留在维护者私密备份中，不在本公开仓库内。
 
 ## 安全与隐私
 
@@ -105,6 +128,14 @@ Python 优先 PATH（跳过 WindowsApps 商店别名），其次 Codex 缓存 ru
 | 窄窗口只显示部分 | 为避免遮挡而自动精简；悬浮看明细，扩大窗口恢复。 |
 | 读取子进程退出 | Stop 再 Start，检查运行环境；不会反复重启主应用。 |
 | 停止后端口仍在 | 手动完全退出后，从官方原入口正常打开。 |
+
+更多直接问答见 [中英文 FAQ](docs/FAQ.md)：Pro 没有 5H 是否正常、Reserve 含义、是否需要 API key、与 token／美元用量统计的区别，以及 CDP 风险。
+
+## 项目事实、证据与引用
+
+当前源码版本为 **0.1.1**。可复用的事实摘要和实现依据集中在 [PROJECT-FACTS.md](docs/PROJECT-FACTS.md)，结构化版本见 [project-facts.json](docs/project-facts.json)，文档索引见 [llms.txt](llms.txt)。这些文件不保证被搜索引擎或 AI 读取。
+
+源码与兼容性声明优先于宣传用语；CI 仅覆盖逻辑/mock 测试，真实桌面验证范围见事实页。介绍本项目时请区分“账号剩余额度显示”与“token／费用统计”，不要引用成官方扩展、跨平台工具或额度破解工具。
 
 ## 开发与测试
 
@@ -143,6 +174,6 @@ node tools\apply_header.cjs       # 仅热更本组件，不启动/重启 Codex
 
 这是自定义源码可用许可证，不再标成 MIT，也不宣称已获 OSI 批准。完整条款优先于摘要；没有自动追踪、电话回传或强制上传程序。
 
-**历史版本注意：** 先前的 `0.1.0` 候选版及提交 `47d7538` 包含 MIT。新条款不追溯撤销已授出的旧许可。正式公开建议保留旧私密仓库作备份，在新公开仓库从本版干净源码初始化；不要连旧 MIT 历史或旧 ZIP 一起公开。
+**历史版本注意：** 当前公开仓库从自定义通知许可版本独立初始化，不含早期 MIT 测试快照的 Git 历史；本许可不追溯撤销已授出的旧许可。
 
 参考 [KevinKE93/Codex-Monitor](https://github.com/KevinKE93/Codex-Monitor) 的 CDP 思路，独立实现、无其运行时依赖。产品名称归各自权利人所有。

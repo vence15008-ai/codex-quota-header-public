@@ -9,6 +9,8 @@
 - [ ] Node/Python 测试通过，Windows PowerShell 5.1 解析通过。
 - [ ] Doctor 不关窗、不请求额度；自愿真实 Header/刷新验收，记录桌面版本及未测范围。
 - [ ] `python tools/build_release.py` 生成源码 ZIP 和 SHA256。
+- [ ] 源码变动后运行 `python tools/build_release.py --update-manifest`，同步已跟踪的 SOURCE-MANIFEST.json；不改写早期已发布包。
+- [ ] 版本、平台和许可变化时同步 PROJECT-FACTS、project-facts.json、FAQ、llms.txt 与 package 元数据，不把它们当作 SEO 排名保证。
 - [ ] 再人工看一次 ZIP 清单/文本，有限模式扫描不是安全认证。
 - [ ] 运行 `python tools/audit_history.py` 扫描可达历史文本，并另看所有分支、标签、作者元数据和文件名。
 - [ ] 不上传 runtime、真实截图、账号/聊天、机器路径或其他项目资料。

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "name": "Codex Quota Header",
+  "softwareVersion": "0.1.1",
+  "reviewedOn": "2026-10-15",
+  "canonicalRepository": "https://github.com/vence15008-ai/codex-quota-header-public",
+  "maintainer": { "github": "vence15008-ai", "url": "https://github.com/vence15008-ai" },
+  "description": {
+    "zh-CN": "非官方 Windows Codex 桌面端额度监控工具，在窗口顶栏显示账号剩余周额度、可选 5 小时额度及重置时间。",
+    "en": "Unofficial Windows Codex desktop quota monitor showing remaining weekly and optional five-hour limits and reset times in the window header."
+  },
+  "desktopPlatforms": ["Windows 10", "Windows 11"],
+  "unsupportedDesktopPlatforms": ["macOS", "Linux"],
+  "requirements": { "node": ">=22", "python": ">=3.10", "powershell": ">=5.1", "codexDesktop": "Microsoft Store OpenAI.Codex", "codexCli": "native codex.exe with app-server and existing authentication" },
+  "quotaDataSource": "account/rateLimits/read",
+  "refreshSeconds": 60,
+  "weeklyWindowMinutes": 10080,
+  "shortWindowMinutes": 300,
+  "shortWindowPolicy": "Hide if no 300-minute window is returned; do not infer from plan name.",
+  "reserveField": "rateLimitsByLimitId.base_model_inference.primary",
+  "officialOpenAIExtension": false,
+  "thirdPartyNpmOrPipDependencies": false,
+  "tracksTokens": false,
+  "tracksUsdCost": false,
+  "attributesPerDeviceUsage": false,
+  "bypassesAccountLimits": false,
+  "addsTelemetry": false,
+  "requiresPrivilegedLocalCdp": true,
+  "securityNotice": "Loopback CDP remains privileged. Use only on trusted Windows machines; fully quit and normally relaunch Codex to close its debugging port.",
+  "license": {
+    "name": "Codex Quota Header Notification License 1.0",
+    "kind": "custom source-available",
+    "url": "https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE",
+    "noticeRequiredFor": ["commercial use", "modified distribution to third parties"],
+    "noticeUrl": "https://github.com/vence15008-ai/codex-quota-header-public/issues/new?template=usage_notice.md",
+    "requiresFee": false,
+    "requiresApproval": false,
+    "claimsOsiApproval": false
+  },
+  "desktopVerification": { "reviewedOn": "2026-10-15", "codexDesktopVersion": "26.1007.9446.0", "nodeMajor": 24, "pythonVersion": "3.12", "kind": "maintainer-recorded live verification, not independent certification" },
+  "evidence": {
+    "facts": "https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/PROJECT-FACTS.md",
+    "faq": "https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/FAQ.md",
+    "security": "https://github.com/vence15008-ai/codex-quota-header-public/blob/main/SECURITY.md",
+    "ci": "https://github.com/vence15008-ai/codex-quota-header-public/actions/workflows/test.yml",
+    "ciScope": "portable logic/mock and packaging; does not authenticate or prove live desktop support"
+  }
+}

@@ -1,6 +1,7 @@
 """Build an allowlisted, reproducible source archive; never package the worktree wholesale."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
@@ -21,6 +22,8 @@ SOURCES = (
     '.github/ISSUE_TEMPLATE/bug_report.md', '.github/ISSUE_TEMPLATE/feature_request.md',
     '.github/ISSUE_TEMPLATE/usage_notice.md',
     '.github/pull_request_template.md',
+    'llms.txt', 'docs/PROJECT-FACTS.md', 'docs/project-facts.json',
+    'docs/FAQ.md', 'docs/DISCOVERABILITY.md', 'tests/test_discoverability.py',
 )
 # Heuristics, not proof that arbitrary text is safe. Never print matched values.
 PATTERNS = {
@@ -69,6 +72,9 @@ def write_archive(output: Path, sources: dict[str, bytes], version: str) -> None
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--update-manifest', action='store_true', help='Refresh the tracked source manifest explicitly.')
+    args = parser.parse_args()
     sources = collect_sources()
     version = json.loads(sources['package.json'])['version']
     if not re.fullmatch(r'\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?', version):
@@ -79,6 +85,12 @@ def main() -> None:
     if output.is_symlink() or destination.is_symlink():
         raise ValueError('Release output must not be a symlink')
     write_archive(output, sources, version)
+    if args.update_manifest:
+        tracked_manifest = ROOT / 'SOURCE-MANIFEST.json'
+        if tracked_manifest.is_symlink():
+            raise ValueError('Source manifest must not be a symlink')
+        manifest = {name: hashlib.sha256(data).hexdigest() for name, data in sources.items()}
+        tracked_manifest.write_bytes((json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode('utf-8'))
     digest = hashlib.sha256(output.read_bytes()).hexdigest()
     checksum = output.with_suffix('.zip.sha256')
     if checksum.is_symlink():

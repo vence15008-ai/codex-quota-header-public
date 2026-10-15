@@ -1,0 +1,24 @@
+# Codex Quota Header
+
+> Unofficial Windows Codex desktop quota monitor. Shows account remaining weekly / optional five-hour limits and reset times in the window header. Source version 0.1.1; facts reviewed 2026-10-15.
+
+This is a plain documentation index for readers and tools that choose to use it. It is not an official crawler protocol, robots.txt control, guaranteed AI citation mechanism, or ranking signal. It is hosted as a repository file, not as GitHub.com's domain-root policy.
+
+## Documentation
+
+- [Chinese installation guide](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/README.md): Features, requirements, setup, removal and troubleshooting.
+- [English guide](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/README.en.md): English overview and setup.
+- [Project facts and source evidence](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/PROJECT-FACTS.md): Identity, support boundaries, evidence and citation format.
+- [Bilingual FAQ](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/FAQ.md): Direct answers about quota, 5H, Reserve, cost tracking, compatibility and safety.
+- [Machine-readable facts](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/project-facts.json): Structured project facts, not search-engine structured markup.
+- [Security](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/SECURITY.md): Privileged local CDP, trust model and data handling.
+- [Custom notification license](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE): Notice before commercial use or modified redistribution; no fee or approval.
+- [Current tests](https://github.com/vence15008-ai/codex-quota-header-public/actions/workflows/test.yml): CI tests mock logic, not live account or all desktop versions.
+
+## Important distinctions
+
+- Windows desktop only; Linux CI does not imply Linux desktop support.
+- Account quota is not token usage, USD credit, an API bill or per-device spending.
+- Not an official OpenAI extension; no quota bypass.
+- CDP is a high-privilege local interface and remains risky on untrusted machines.
+- Custom source-available license, not MIT; no OSI approval claimed.

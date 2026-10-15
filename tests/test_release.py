@@ -1,5 +1,6 @@
 import hashlib
 import json
+import posixpath
 import re
 from pathlib import Path
 import tempfile
@@ -50,7 +51,7 @@ class ReleaseTests(unittest.TestCase):
             for link in re.findall(r'\]\(([^)]+)\)', data.decode('utf-8')):
                 if '://' in link or link.startswith('#'):
                     continue
-                target = (Path(name).parent / link.split('#')[0]).as_posix()
+                target = posixpath.normpath((Path(name).parent / link.split('#')[0]).as_posix())
                 self.assertIn(target, sources, f'{name}: broken or unpackaged link')
 
     def test_custom_license_metadata_and_notification_channel(self):
