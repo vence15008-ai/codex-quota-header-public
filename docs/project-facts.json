@@ -4,6 +4,7 @@
   "softwareVersion": "0.1.1",
   "reviewedOn": "2026-10-15",
   "canonicalRepository": "https://github.com/vence15008-ai/codex-quota-header-public",
+  "projectWebsite": "https://vence15008-ai.github.io/codex-quota-header-public/",
   "maintainer": { "github": "vence15008-ai", "url": "https://github.com/vence15008-ai" },
   "description": {
     "zh-CN": "非官方 Windows Codex 桌面端额度监控工具，在窗口顶栏显示账号剩余周额度、可选 5 小时额度及重置时间。",

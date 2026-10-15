@@ -24,6 +24,8 @@ SOURCES = (
     '.github/pull_request_template.md',
     'llms.txt', 'docs/PROJECT-FACTS.md', 'docs/project-facts.json',
     'docs/FAQ.md', 'docs/DISCOVERABILITY.md', 'tests/test_discoverability.py',
+    'site/index.html', 'site/en/index.html', 'site/style.css', 'site/favicon.svg',
+    'site/sitemap.xml', 'site/llms.txt', '.github/workflows/pages.yml', 'tests/test_site.py',
 )
 # Heuristics, not proof that arbitrary text is safe. Never print matched values.
 PATTERNS = {

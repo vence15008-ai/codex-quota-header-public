@@ -1,0 +1,17 @@
+# Codex Quota Header
+
+> Unofficial Windows Codex desktop quota monitor, source version 0.1.1. Account limits, not token or USD billing. Not affiliated with OpenAI.
+
+## Pages
+- [中文介绍与安装](https://vence15008-ai.github.io/codex-quota-header-public/)
+- [English introduction and installation](https://vence15008-ai.github.io/codex-quota-header-public/en/)
+
+## Source and evidence
+- [Repository](https://github.com/vence15008-ai/codex-quota-header-public)
+- [Project facts](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/PROJECT-FACTS.md)
+- [Machine-readable facts](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/project-facts.json)
+- [FAQ](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/FAQ.md)
+- [Security](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/SECURITY.md)
+- [Custom notification license](https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE)
+
+Local CDP is privileged. Windows 10/11 only. Refresh every 60 seconds. No token/cost/device attribution or limit bypass. Commercial use or modified redistribution requires a one-time Issue notice, not payment or approval. This optional index is not an access-control rule or a guaranteed crawler integration or ranking signal. Cite the source and its version; never treat the fictional preview as account data.

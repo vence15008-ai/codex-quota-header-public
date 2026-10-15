@@ -19,7 +19,7 @@ class DiscoverabilityTests(unittest.TestCase):
         self.assertEqual(facts['softwareVersion'], package['version'])
         self.assertEqual(facts['name'], 'Codex Quota Header')
         self.assertEqual(package['repository']['url'], facts['canonicalRepository'] + '.git')
-        self.assertEqual(package['homepage'], facts['canonicalRepository'] + '#readme')
+        self.assertEqual(package['homepage'], facts['projectWebsite'])
         self.assertEqual(facts['quotaDataSource'], 'account/rateLimits/read')
         self.assertEqual(facts['refreshSeconds'], 60)
         self.assertEqual(facts['weeklyWindowMinutes'], 10080)

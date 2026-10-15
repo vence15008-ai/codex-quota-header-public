@@ -1,5 +1,7 @@
 # Codex Quota Header — Windows Codex Quota Monitor
 
+[Project website / install guide](https://vence15008-ai.github.io/codex-quota-header-public/en/) · [中文网站](https://vence15008-ai.github.io/codex-quota-header-public/)
+
 **Codex Quota Header is an unofficial Windows Codex desktop quota monitor.** It displays remaining weekly and optional 5-hour usage limits, progress bars, and reset times inside the window header / title bar, refreshing every 60 seconds without repeatedly opening the quota panel. It is not a token counter or billing dashboard.
 
 [简体中文 / complete guide](README.md) · [FAQ](docs/FAQ.md) · [Facts & citation](docs/PROJECT-FACTS.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md)

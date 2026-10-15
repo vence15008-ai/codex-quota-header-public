@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codex Quota Header｜Windows Codex 额度常驻顶栏</title>
+  <meta name="description" content="Codex Quota Header 是非官方 Windows Codex 额度监控工具，在 Header 显示剩余周额度、可选 5H 额度、进度条及重置时间。每分钟刷新；提供安装步骤、源码与风险说明，不统计 token 或美元花费。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-site-verification" content="9_XcwffGiLVENbMrieFCKASt-Nqadee6h4k2h2_GNQ8">
+  <meta name="theme-color" content="#f5f4ee">
+  <link rel="canonical" href="https://vence15008-ai.github.io/codex-quota-header-public/">
+  <link rel="alternate" hreflang="zh-CN" href="https://vence15008-ai.github.io/codex-quota-header-public/">
+  <link rel="alternate" hreflang="en" href="https://vence15008-ai.github.io/codex-quota-header-public/en/">
+  <link rel="alternate" hreflang="x-default" href="https://vence15008-ai.github.io/codex-quota-header-public/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Codex Quota Header — 额度留在顶栏，注意力留给代码">
+  <meta property="og:description" content="Windows Codex 非官方额度监控：周额度、5H、重置时间，一行看清。源码公开，附安装步骤和 CDP 风险说明。">
+  <meta property="og:url" content="https://vence15008-ai.github.io/codex-quota-header-public/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Codex Quota Header","url":"https://vence15008-ai.github.io/codex-quota-header-public/","softwareVersion":"0.1.1","operatingSystem":"Windows 10, Windows 11","applicationCategory":"DeveloperApplication","description":"非官方 Windows Codex 桌面端额度监控，在窗口顶栏显示账号剩余周额度、可选 5 小时额度及重置时间；不统计 token 或美元花费。","license":"https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE","author":{"@type":"Person","name":"vence15008-ai","url":"https://github.com/vence15008-ai"},"sameAs":"https://github.com/vence15008-ai/codex-quota-header-public"}
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header>
+  <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">≡</span>Codex Quota Header</a>
+  <nav aria-label="主导航"><a class="desktop-link" href="#install">安装</a><a class="desktop-link" href="#faq">常见问题</a><a href="en/" lang="en">English</a><a href="https://github.com/vence15008-ai/codex-quota-header-public">GitHub ↗</a></nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow"><span class="dot" aria-hidden="true"></span> WINDOWS · UNOFFICIAL · v0.1.1</p>
+    <h1 id="hero-title">额度留在顶栏，<br><em>注意力留给代码。</em></h1>
+    <p class="lead">不必反复打开额度面板。把 Codex 的剩余周额度、可选 5H 额度和重置时间，放进窗口 Header 的一行里。</p>
+    <div class="actions"><a class="button primary" href="#install">查看安装步骤 <span aria-hidden="true">↓</span></a><a class="button" href="https://github.com/vence15008-ai/codex-quota-header-public">查看源码 <span aria-hidden="true">↗</span></a></div>
+    <p class="fine">仅支持 Windows 10 / 11 · 非 OpenAI 官方插件 · 不是 token / 美元计费面板</p>
+  </section>
+  <figure class="preview">
+    <div class="editor" role="img" aria-label="虚构示意：窗口顶栏显示周额度 68%、5H 额度 92%、Reserve 100% 和重置时间，下面保留编码工作区。">
+      <div class="editor-top"><span class="editor-title">›_ Codex</span><span class="quota">周额度 <strong>68%</strong><span class="bar"><i style="width:68%"></i></span><span class="reset">周四 12:00 重置</span></span><span class="quota">5H <strong>92%</strong><span class="bar"><i style="width:92%"></i></span><span class="reset">18:30 重置</span></span><span class="quota">Reserve <strong>100%</strong></span><span class="age">1 分钟前 ↻</span></div>
+      <div class="editor-body"><div class="sidebar"><p>工作区</p><p class="selected">⌁ &nbsp;继续你的项目</p><p>＋ &nbsp;新建对话</p></div><div class="code"><span class="comment">// 少一个打断，多一点专注。</span><br><span class="keyword">const</span> focus = {<br>&nbsp; workspace: <span class="string">"your next idea"</span>,<br>&nbsp; quota: <span class="string">"always in view"</span><br>};</div></div>
+    </div>
+    <figcaption><span>布局示意，全部额度与时间均为虚构；不是实时数据或真实账号截图。</span><span>真实显示取决于账号接口返回值。</span></figcaption>
+  </figure>
+  <div class="benefits">
+    <article><span class="number">01 / 看得见</span><h2>一行额度，留出工作区</h2><p>额度和进度条在窗口顶栏显示，不放进会话正文。5H 窗口未返回时不凭套餐名称补造。</p></article>
+    <article><span class="number">02 / 少打断</span><h2>每分钟刷新，点击有反馈</h2><p>自动更新间隔 60 秒，手动刷新立即显示加载动效；加载或失败时保留原有数值。</p></article>
+    <article><span class="number">03 / 可核对</span><h2>本机读取，源码可查</h2><p>使用已登录 Codex 的 app-server 读取账号限额，不收集会话，也不接入项目遥测。</p></article>
+  </div>
+  <section id="install" class="content split">
+    <div><p class="eyebrow">GET STARTED</p><h2 class="section-title">先检查环境，<br>再挂载顶栏。</h2><p class="requirements">需要 Windows 10 / 11、PowerShell 5.1+、Node.js 22+、Python 3.10+，以及已登录的 Microsoft Store Codex 桌面端和支持 app-server 的原生 <code>codex.exe</code>。</p><p class="requirements">无第三方 npm / pip 依赖。已记录实机版本：Codex <code>26.1007.9446.0</code>、Node 24、Python 3.12（2026-10-15）。其他桌面版本尚未验证。</p><a href="https://github.com/vence15008-ai/codex-quota-header-public/blob/main/README.md">完整安装、卸载与回滚说明 ↗</a></div>
+    <div class="steps">
+      <div><h3>获取源码</h3><pre><code>git clone https://github.com/vence15008-ai/codex-quota-header-public.git
+cd codex-quota-header-public</code></pre><p>放在仅可信用户可写的目录。先审阅源码及安全说明。</p></div>
+      <div><h3>检查环境</h3><pre><code>powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\manage.ps1 -Action Doctor</code></pre><p>ExecutionPolicy 参数只作用于本进程；请遵守组织的设备管理策略。</p></div>
+      <div><h3>保存任务，手动完全退出 Codex 后启动</h3><pre><code>powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\manage.ps1 -Action Start</code></pre><p>包括退出托盘进程。工具不会强制关闭现有 Codex，也不会自动启用开机启动。</p></div>
+    </div>
+  </section>
+  <section class="content split" id="facts">
+    <div><p class="eyebrow">FACTS, NOT HYPE</p><h2 class="section-title">额度不是账单。<br>本地也不代表零风险。</h2><p class="requirements">这是非官方实验性 UI 定制，不是官方扩展接口。Codex 更新可能使挂载失效。</p><div class="notice"><strong>CDP 安全提醒：</strong>本机调试端口具有应用级权限，不应暴露或转发。停止 helper 不会关闭应用调试端口；需要完全退出 Codex，再用原官方入口正常启动。只在可信电脑上使用。</div></div>
+    <dl class="facts"><div><dt>数据来源</dt><dd><code>account/rateLimits/read</code>，使用现有 Codex 登录；app-server 会访问账号服务。</dd></div><div><dt>显示内容</dt><dd>剩余周额度、可选 300 分钟窗口、Reserve、重置时间和相对更新时间。</dd></div><div><dt>不做什么</dt><dd>不统计 token、美元花费或设备归因；不增加或绕过额度。</dd></div><div><dt>数据边界</dt><dd>账号级限额，不是本机消耗。Reserve 对应接口返回的 <code>base_model_inference</code> bucket。</dd></div><div><dt>许可证</dt><dd>自定义源码可用许可证，非 MIT。商用或修改后对外分发须通过 GitHub Issue 通知一次；无费用或审批。</dd></div><div><dt>核对来源</dt><dd><a href="https://github.com/vence15008-ai/codex-quota-header-public/blob/main/docs/PROJECT-FACTS.md">事实与实现证据</a> · <a href="https://github.com/vence15008-ai/codex-quota-header-public/blob/main/SECURITY.md">安全说明</a> · <a href="https://github.com/vence15008-ai/codex-quota-header-public/actions/workflows/test.yml">测试范围</a></dd></div></dl>
+  </section>
+  <section id="faq" class="content"><p class="eyebrow">FAQ</p><h2 class="section-title">安装前，你可能想知道。</h2><div class="faq">
+    <details><summary>它是 Codex 官方插件吗？</summary><p>不是。Codex Quota Header 与 OpenAI 无关联，通过本机 Chrome DevTools Protocol（CDP）挂载 UI。它没有修改 Codex 安装包，但依赖非官方 DOM 结构。</p></details>
+    <details><summary>为什么我的 5H 额度没有显示？</summary><p>只有接口返回 300 分钟的额度窗口才会显示。工具不按 Pro 等套餐名称推断权益，也不补造接口没有给出的数据。</p></details>
+    <details><summary>能看本机、Dots 或多个设备分别花了多少美元吗？</summary><p>不能。这里只读取账号限额，并非 token / USD 计费或逐设备用量追踪。相同账号在别处的消耗也可能影响剩余额度。</p></details>
+    <details><summary>macOS、Linux 或所有 Codex 版本都能用吗？</summary><p>当前桌面端仅支持 Windows 10 / 11。Linux CI 只覆盖可移植逻辑和打包，不代表支持 Linux 桌面。已验证版本及边界请看项目事实页。</p></details>
+    <details><summary>免费吗？商用或者修改后发布要做什么？</summary><p>普通安装使用，包括工作场景的额度显示，无需通知。商用或修改后向第三方分发前，按<a href="https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE">完整许可证</a>提交一次 <a href="https://github.com/vence15008-ai/codex-quota-header-public/issues/new?template=usage_notice.md">Usage notice Issue</a> 即可，无费用、审批或等待回复。</p></details>
+  </div></section>
+  <div class="closing"><div><h2>让额度可见，把判断留给你。</h2><p>从源码与安全说明开始，先在自己的环境里验证。</p></div><a class="button primary" href="https://github.com/vence15008-ai/codex-quota-header-public">前往 GitHub <span aria-hidden="true">↗</span></a></div>
+</main>
+<footer><span>由 <a href="https://github.com/vence15008-ai">vence15008-ai</a> 维护 · 内容复核 2026-10-15 · 非官方项目</span><div class="footer-links"><a href="https://github.com/vence15008-ai/codex-quota-header-public/blob/main/LICENSE">许可证</a><a href="https://github.com/vence15008-ai/codex-quota-header-public/issues">反馈</a><a href="llms.txt">文档索引</a><a href="sitemap.xml">Sitemap</a></div></footer>
+</body></html>

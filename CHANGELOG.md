@@ -2,6 +2,8 @@
 
 ## Unreleased — documentation and discoverability
 
+- Add a static bilingual GitHub Pages website with canonical/hreflang, descriptive metadata, SoftwareApplication JSON-LD, sitemap and Google ownership verification; no trackers or promised indexing.
+- Deploy only the site directory after Python tests, with pinned Actions and scoped Pages permissions. Keep desktop runtime untouched.
 - Clarify the Chinese/English project title, supported scenario, quota-versus-billing distinction, and installation entry point.
 - Add bilingual FAQ, source-backed project facts, machine-readable metadata and an optional documentation index.
 - Add repository/package discovery metadata without keyword stuffing, tracking, or unsupported ranking claims.

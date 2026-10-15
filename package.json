@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "description": "Unofficial Windows Codex desktop quota monitor: remaining weekly/5-hour limits and reset times in the header. Not token or billing tracking.",
-  "homepage": "https://github.com/vence15008-ai/codex-quota-header-public#readme",
+  "homepage": "https://vence15008-ai.github.io/codex-quota-header-public/",
   "repository": { "type": "git", "url": "https://github.com/vence15008-ai/codex-quota-header-public.git" },
   "keywords": ["codex", "codex-desktop", "codex-quota", "codex-usage", "quota-monitor", "usage-limits", "windows", "titlebar", "chrome-devtools-protocol", "app-server", "python", "nodejs", "powershell"],
   "license": "SEE LICENSE IN LICENSE",

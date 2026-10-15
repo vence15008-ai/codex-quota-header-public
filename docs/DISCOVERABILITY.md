@@ -23,9 +23,17 @@
 
 ## 托管平台边界
 
-GitHub 仓库所有者能修改 README、Topics、About、文件与工作流，但不能通过提交一个仓库根目录的 `robots.txt`、`sitemap.xml` 或 HTML 片段来控制 `github.com` 的域名级爬虫规则、网页 `<head>` 或 Search Console 所有权。此版没有新增独立网站或 GitHub Pages，不宣称已配置网页级 canonical、JSON-LD、Open Graph 或爬虫白名单。
+GitHub 仓库所有者能修改 README、Topics、About、文件与工作流，但不能通过提交一个仓库根目录的 `robots.txt`、`sitemap.xml` 或 HTML 片段来控制 `github.com` 的域名级爬虫规则、网页 `<head>` 或 Search Console 所有权。
 
-结构化 JSON 是项目数据，不是已注入 GitHub 网页的 schema.org 标记；`llms.txt` 也是普通仓库文件。独立站或 Pages 如将来需要，应另行配置可抓取的静态页面和真实元数据，再验证实际域名路径。
+本版新增独立的 [GitHub Pages 项目网站](https://vence15008-ai.github.io/codex-quota-header-public/)，源码在 [site/index.html](../site/index.html) 和 [English page](../site/en/index.html)。正文直接输出可抓取 HTML，不依赖 JavaScript 渲染；各语言配置自引用 canonical、互相对应的 hreflang、title、description、Open Graph 和真实的 SoftwareApplication JSON-LD，不添加虚构评分或评价。页面包含 CDP 风险及许可证说明，示意数据明确标为虚构。
+
+[部署工作流](../.github/workflows/pages.yml)通过测试后仅上传 `site/`，不把工作区、Git 历史、runtime 或本地截图放上网站。GitHub 仓库页本身未注入 schema.org 标记。
+
+项目地址位于 `/codex-quota-header-public/` 子路径，因此没有用子目录 `robots.txt` 冒充域名根规则；有效规则位于 `https://vence15008-ai.github.io/robots.txt`，不在本项目控制范围。本站不主动限制搜索抓取，但域名规则、上游可用性及搜索平台仍可能影响实际抓取。没有擅自更改训练爬虫偏好。
+
+网站地图位于 [sitemap.xml](https://vence15008-ai.github.io/codex-quota-header-public/sitemap.xml)，只列出中英文规范网址。Google Search Console 使用该项目完整路径的 **URL-prefix** 资源，通过首页公开的 `google-site-verification` 元标签验证；保留该标签以维持验证。验证与提交状态以 Search Console 实际结果为准，不能仅凭源码中的标记就宣称已验证或收录。此标记是公开的所有权证明，不是账号密码或 API 凭证。
+
+提交步骤：验证资源 → “站点地图”提交完整 sitemap URL → “网址检查”检查首页并在可用时请求编入索引。没有收录保证、付费提交服务或自动反复请求。`llms.txt` 仅为可选文档索引，非官方排名协议。
 
 ## 依据
 

@@ -1,5 +1,7 @@
 # Codex Quota Header — Windows Codex 额度监控
 
+[项目网站 / 安装入口](https://vence15008-ai.github.io/codex-quota-header-public/) · [English website](https://vence15008-ai.github.io/codex-quota-header-public/en/)
+
 **Codex Quota Header 是 Windows Codex 桌面端的非官方额度监控工具（quota monitor）。** 它把账号剩余周额度、可选 5 小时额度、进度条和重置时间显示在窗口 Header／标题栏，每分钟刷新，让你不用反复打开额度面板。
 
 Unofficial Windows Codex desktop quota monitor: remaining weekly / 5-hour usage limits and reset times in the window header. Not a token counter or billing dashboard.
