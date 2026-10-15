@@ -1,0 +1,85 @@
+Codex Quota Header Notification License 1.0
+Custom source-available license; not the MIT License.
+
+Copyright (c) 2026 Codex Quota Header contributors
+
+1. Scope and permission
+
+"Software" means the code and documentation distributed with this license.
+Subject to the conditions below, the copyright holders permit anyone to use,
+copy, study, modify, combine, publish, distribute, and sell the Software and
+modified versions, without a license fee or royalty. Recipients may exercise
+the same permissions under this license. No ownership of your modifications
+is transferred to the original copyright holders.
+
+2. Notification triggers
+
+You must notify the upstream project before either of the following begins:
+
+(a) Commercial Use: using or distributing the Software as part of a product,
+    service, offering, or activity primarily intended for commercial advantage
+    or monetary compensation. Examples include selling copies, incorporating
+    the Software into a commercial product, and offering a paid or monetized
+    service based on the Software.
+(b) Modified Distribution: publishing or distributing a modified source or
+    binary version of the Software to third parties, whether free or paid.
+
+Ordinary installation and private end-user use do not require notification,
+including ordinary workplace use of the quota display. Private modifications
+that are not distributed or used for Commercial Use do not require notification.
+Changing local preferences alone is not Modified Distribution. Sharing the
+unmodified Software without Commercial Use does not require notification.
+
+3. How to notify
+
+Create a GitHub Issue at the upstream project's notification tracker:
+https://github.com/vence15008-ai/codex-quota-header-public/issues
+
+Use a title beginning with "[Usage notice]" and provide:
+- the project or product name;
+- a short, non-confidential description of the purpose;
+- whether the notice covers Commercial Use, Modified Distribution, or both;
+- a public project or product link, if one is available.
+
+One notice per distinct project or commercial offering is sufficient, including
+when both triggers apply. Routine updates within the described scope do not
+require repeated notices. A materially different project or offering requires
+a new notice. No source-code disclosure, revenue report, legal name, private
+contact details, credentials, or confidential business information is required.
+
+Notification is complete when the Issue is submitted. You do not need approval
+or acknowledgment and do not need to wait for a reply. Notification creates no
+payment obligation, endorsement, or support obligation. If the tracker cannot
+accept your Issue, keep a dated record of the attempted notice and submit it
+when the tracker can accept it again; no approval or fee is required meanwhile.
+Submitting a contribution directly to the upstream project by Issue or pull
+request needs no separate usage notice for that contribution itself. This does
+not substitute for notice of an independent commercial offering or release.
+
+4. Redistribution and notices
+
+Keep this license and the applicable copyright notices with redistributed
+copies and substantial portions of the Software, including modified versions.
+Do not remove or bypass the notification conditions for the original Software.
+You may choose additional terms for your own original additions, but they must
+not take away the permissions this license grants for the original Software.
+
+5. Earlier licenses and third-party rights
+
+This license applies to copies distributed under it. It does not withdraw
+permissions already granted for earlier copies under another license, and
+does not replace separate licenses or rights in third-party material.
+No trademark rights or endorsement are granted. This is a custom license;
+no OSI approval or standard MIT license status is claimed.
+
+6. Warranty and liability
+
+The Software is provided as available and at your own risk. To the extent
+permitted by applicable law, the copyright holders and contributors give no
+warranties, including fitness for a purpose, merchantability, non-infringement,
+accuracy, or uninterrupted operation. To that same extent, they accept no
+liability for damages or other claims resulting from the Software or its use,
+whether based on contract, tort, or another legal theory.
+
+The English text above is the operative license. Explanations and examples
+elsewhere in the repository are summaries and do not override this text.

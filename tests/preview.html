@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>Codex 窗口 Header 组件自测</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1a1c1f;font:14px "Segoe UI",sans-serif}
+.ApplicationMenuTopBar_fixture{display:flex;align-items:center;height:36px;padding:0 137px 0 6px;background:#fafafa;gap:6px}
+.native-controls{display:flex;gap:2px;flex-shrink:0}
+.native-controls button{width:54px;height:26px;border:0;background:none;color:#333;margin:0}
+.caption{position:absolute;right:0;top:0;width:137px;height:36px;display:flex;justify-content:space-around;align-items:center;pointer-events:none}
+.workspace{display:flex;margin-top:8px}.sidebar{width:280px;flex-shrink:0;background:#f5f5f5;height:450px;padding:12px}
+.conversation{flex:1;min-width:0}.conversation header{height:52px;display:flex;align-items:center;padding:0 16px;border-bottom:1px solid #eee}
+main{padding:24px}.test-controls button{margin:5px}
+@media(prefers-color-scheme:dark){body{background:#202123;color:#ececec}.ApplicationMenuTopBar_fixture{background:#202123}.native-controls button{color:#ddd}.sidebar{background:#26272a}}
+</style>
+<div class="ApplicationMenuTopBar_fixture" data-codex-window-header><div class="native-controls"><button>文件</button><button>编辑</button><button>视图</button><button>帮助</button></div></div><div class="caption">—　□　×</div>
+<div class="workspace"><aside class="sidebar">会话列表</aside><section class="conversation"><header data-app-shell-titlebar><div data-app-shell-main-titlebar>会话自己的标题栏——这里不应出现额度</div></header><main>
+<h1>窗口级 Header 自测（模拟数据）</h1><p>额度应在第一行菜单右侧，而不是下方会话标题栏。</p>
+<div class="test-controls"><button id="normal">正常额度</button><button id="loading">刷新中</button><button id="failure">刷新失败</button><button id="no-short">无 5H 额度</button><button id="remount">重建 Header</button></div><pre id="result"></pre>
+</main></section></div>
+<script src="../header.js"></script><script>
+const demo={view:{week:{remaining:72,resetsAt:1800000000},short:{remaining:84,resetsAt:1799990000},reserve:{remaining:93}},updatedAt:Date.now()-120000,loading:false,error:null};
+const api=()=>window.__codexQuotaHeaderV1;
+function update(s){document.getElementById('result').textContent=JSON.stringify(api().update(s));}
+installQuotaHeader(demo);update(demo);
+document.getElementById('normal').onclick=()=>update(demo);
+document.getElementById('loading').onclick=()=>update({...demo,loading:true});
+document.getElementById('failure').onclick=()=>update({...demo,error:'模拟网络超时'});
+document.getElementById('no-short').onclick=()=>update({...demo,view:{...demo.view,short:null}});
+document.getElementById('remount').onclick=()=>{let el=document.querySelector('.ApplicationMenuTopBar_fixture');let clone=el.cloneNode(false);clone.append(el.querySelector('.native-controls').cloneNode(true));el.replaceWith(clone);};
+</script></html>

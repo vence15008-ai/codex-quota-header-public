@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+runtime/
+.venv/
+node_modules/
+*.log
+dist/
+.env
+.env.*
+*.lnk
+*.zip
+*.sha256

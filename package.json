@@ -1,0 +1,14 @@
+{
+  "name": "codex-quota-header",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Unofficial local Windows Codex desktop quota header",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": { "url": "https://github.com/vence15008-ai/codex-quota-header-public/issues" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/bridge.test.cjs tests/launcher.test.cjs",
+    "check:layout": "node tools/check_layout.cjs",
+    "check:refresh": "node tools/test_refresh.cjs"
+  }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="138" viewBox="0 0 1120 138" role="img" aria-label="Synthetic Codex header quota display">
+  <rect width="1120" height="138" rx="14" fill="#f5f6f8"/>
+  <path d="M14 0h1092a14 14 0 0 1 14 14v38H0V14A14 14 0 0 1 14 0" fill="#20232b"/>
+  <g font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="14" fill="#f2f4f8">
+    <text x="22" y="32">Codex</text><text x="94" y="32" fill="#b7c0cf">文件　编辑　视图</text>
+    <text x="323" y="32">周额度 72%</text>
+    <rect x="411" y="23" width="55" height="6" rx="3" fill="#555c69"/>
+    <rect x="411" y="23" width="40" height="6" rx="3" fill="#80c7ff"/>
+    <text x="478" y="32" fill="#c6ceda">周五 20:00 重置</text>
+    <text x="600" y="32">5H 84%</text>
+    <rect x="662" y="23" width="38" height="6" rx="3" fill="#555c69"/>
+    <rect x="662" y="23" width="32" height="6" rx="3" fill="#80c7ff"/>
+    <text x="712" y="32" fill="#c6ceda">22:00 重置</text>
+    <text x="804" y="32">Reserve 93%</text><text x="906" y="32" fill="#c6ceda">1分钟前</text>
+    <text x="980" y="33" font-size="20">↻</text><text x="1031" y="32" fill="#b7c0cf">−　□　×</text>
+  </g>
+  <text x="30" y="92" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="16" fill="#3d4654">额度留在窗口顶栏，正文空间不变。</text>
+  <text x="30" y="118" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="12" fill="#737d8c">设计示意 · 数据均为虚构 · 实际样式随 Codex 主题和可用宽度变化</text>
+</svg>
